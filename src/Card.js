@@ -13,6 +13,7 @@ const Card = (props) => {
   const onClickCP = () => {
     props.onClickCP("Buxar");
   };
+  
   const onClickProfileItem = (index) => {
     props.onClickProfileItem(index);
   };
