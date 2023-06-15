@@ -1,0 +1,33 @@
+.card {
+  width: 210px;
+  height: 400px;
+  margin: 10px 0px 10px 30px;
+}
+.image-container img {
+  width: 210px;
+  height: 280px;
+}
+.Product-Name {
+  text-align: center;
+  height: 20px;
+  border: 2px solid black;
+  padding: 2px;
+  margin: 5px;
+}
+.Line {
+  text-decoration: line-through rgb(182, 19, 19);
+}
+.Product-details {
+  text-align: center;
+  height: 20px;
+  border: 2px solid black;
+  padding: 2px;
+  margin: 5px;
+}
+.Price {
+  text-align: center;
+  height: 20px;
+  border: 2px solid black;
+  padding: 2px;
+  margin: 5px;
+}
