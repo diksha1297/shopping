@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Card from "./Card";
+import Operator from "./Operator";
 const App = () => {
   const [list, setList] = useState([
     "Kumari",
@@ -34,24 +35,41 @@ const App = () => {
         return true;
       }
     });
-    console.log("Newlist",newList);
+    console.log("Newlist", newList);
     setList(newList);
   };
+  let val;
+  const [count1, setCount] = useState(0);
+  const onClickButton1 = (val) => {
+    setCount(count1 + val);
+  };
+  const onClickButton2 = (val) => {
+    setCount(count1 - val);
+  };
+
   return (
-    <Card
-      onClickProfileItem={onCLickProfileItemHandler}
-      profileList={list}
-      onClickLastName={onClickHandler}
-      onClickAge={onClickAgeHandler}
-      onClickNP={onClickNativePlaceHandler}
-      onClickCP={onClickCurrentPlaceHandler}
-      lastName={lastName}
-      age={age}
-      nativePlace={nativePlace}
-      currentPlace={currentPlace}
-    >
-      Diksha hello
-    </Card>
+    <div>
+      <Operator
+        count1={count1}
+        val={val}
+        onClickButton1={onClickButton1}
+        onClickButton2={onClickButton2}
+      ></Operator>
+      <Card
+        onClickProfileItem={onCLickProfileItemHandler}
+        profileList={list}
+        onClickLastName={onClickHandler}
+        onClickAge={onClickAgeHandler}
+        onClickNP={onClickNativePlaceHandler}
+        onClickCP={onClickCurrentPlaceHandler}
+        lastName={lastName}
+        age={age}
+        nativePlace={nativePlace}
+        currentPlace={currentPlace}
+      >
+        Diksha hello
+      </Card>
+    </div>
   );
 };
 
