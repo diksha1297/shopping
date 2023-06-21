@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Card from "./Card";
 import Operator from "./Operator";
+import Calculator from "./Calculator";
 const App = () => {
   const [list, setList] = useState([
     "Kumari",
@@ -14,7 +15,7 @@ const App = () => {
   const [age, setAge] = useState(26);
   const [nativePlace, setNativePlace] = useState("Buxar");
   const [currentPlace, steCurrentPlace] = useState("Bengaluru");
-  console.log(list);
+
   const onClickHandler = (newLastName) => {
     setLastName(newLastName);
   };
@@ -33,9 +34,10 @@ const App = () => {
         return false;
       } else {
         return true;
+      
       }
     });
-    console.log("Newlist", newList);
+    // console.log("Newlist", newList);
     setList(newList);
   };
   let val;
@@ -49,13 +51,15 @@ const App = () => {
 
   return (
     <div>
+      <Calculator>
+      </Calculator>
       <Operator
         count1={count1}
         val={val}
         onClickButton1={onClickButton1}
         onClickButton2={onClickButton2}
       ></Operator>
-      <Card
+      {/* <Card
         onClickProfileItem={onCLickProfileItemHandler}
         profileList={list}
         onClickLastName={onClickHandler}
@@ -68,7 +72,8 @@ const App = () => {
         currentPlace={currentPlace}
       >
         Diksha hello
-      </Card>
+      </Card> */}
+      
     </div>
   );
 };
