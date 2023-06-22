@@ -1,13 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Calculator from "./Calculator";
+import Counter from "./Counter";
+import Form from "./Form";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Form/>,
+  },
+  {
+    path: "/counter",
+    element: <Counter/>,
+  },
+  {
+    path: "/calculator",
+    element: <Calculator/>,
+  },
+]);
 root.render(
   // <React.StrictMode>
-    <App />
+  <>
+  <App/>
+  <RouterProvider router={router} />
+  </>
+  
   // </React.StrictMode>
 );
 
