@@ -20,6 +20,12 @@ const App = () => {
       <div>
         <a href={`/calculator`}>Calculator</a>
       </div>
+      <div>
+        <a href={`/flexTut`}>FlexTut</a>
+      </div>
+      <div>
+        <a href={`/Login`}>Login</a>
+      </div>
     </div>
   );
 };

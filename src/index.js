@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Calculator from "./Calculator";
 import Counter from "./Counter";
 import Form from "./Form";
+import FlexTut from "./FlexTut";
+import Login from "./Login";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: "/calculator",
     element: <Calculator/>,
+  },
+  {
+    path: "/flexTut",
+    element: <FlexTut/>,
+  },
+  {
+    path: "/Login",
+    element: <Login/>,
   },
 ]);
 root.render(

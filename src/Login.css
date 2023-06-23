@@ -1,0 +1,18 @@
+.login-main{
+    background: grey;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.login-box{
+    background: white;
+    width: 150px;
+    height: 200px;
+    display:flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
